@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Orçamento</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <!-- Ícone de dinheiro no canto superior direito -->
+    <div class="money-icon">💰</div>
+
+    <!-- Título Centralizado -->
+    <h1 class="title">Gerador de Orçamento</h1>
+
+    <!-- Caixa de formulário -->
+    <div class="form-container">
+        <form>
+            <!-- Detalhes do Serviço ou Produto -->
+            <div class="input-group">
+                <label for="detalhes">Detalhes do Serviço ou Produto:</label>
+                <input type="text" id="detalhes" placeholder="Descrição do serviço/produto" title="Descrição do serviço/produto que será prestado ou vendido. Quantidade ou volume necessário.">
+            </div>
+
+            <!-- Especificações Técnicas -->
+            <div class="input-group">
+                <label for="especificacoes">Especificações Técnicas:</label>
+                <input type="text" id="especificacoes" placeholder="Especificações técnicas" title="Requisitos específicos, como materiais, insumos, equipamentos, etc. Padrões de qualidade e prazos de entrega.">
+            </div>
+
+            <!-- Mão de Obra -->
+            <div class="input-group">
+                <label for="maoDeObra">Mão de Obra:</label>
+                <input type="text" id="maoDeObra" placeholder="Informações sobre a mão de obra" title="Quantidade de profissionais envolvidos e suas qualificações. Horas estimadas para execução do trabalho.">
+            </div>
+
+            <!-- Custos Fixos e Variáveis -->
+            <div class="input-group">
+                <label for="custos">Custos Fixos e Variáveis:</label>
+                <div class="cost-inputs">
+                    <div class="cost-item">
+                        <label for="materiais">Custo de materiais:</label>
+                        <input type="number" id="materiais" placeholder="R$" title="Custo de materiais">
+                    </div>
+                    <div class="cost-item">
+                        <label for="transporte">Transporte:</label>
+                        <input type="number" id="transporte" placeholder="R$" title="Custo de transporte">
+                    </div>
+                    <div class="cost-item">
+                        <label for="energia">Energia:</label>
+                        <input type="number" id="energia" placeholder="R$" title="Custo de energia">
+                    </div>
+                    <div class="cost-item">
+                        <label for="aluguel">Aluguel:</label>
+                        <input type="number" id="aluguel" placeholder="R$" title="Custo de aluguel">
+                    </div>
+                    <div class="cost-item">
+                        <label for="impostos">Impostos e taxas:</label>
+                        <input type="number" id="impostos" placeholder="R$" title="Impostos e taxas">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prazo de Execução -->
+            <div class="input-group">
+                <label for="prazo">Prazo de Execução:</label>
+                <input type="text" id="prazo" placeholder="Tempo estimado" title="Tempo estimado para conclusão do serviço.">
+            </div>
+
+            <!-- Forma de Pagamento -->
+            <div class="input-group">
+                <label for="pagamento">Forma de Pagamento:</label>
+                <input type="text" id="pagamento" placeholder="Condições de pagamento" title="Condições de pagamento, como parcelamento, descontos para pagamento à vista, etc.">
+            </div>
+
+            <!-- Margem de Lucro -->
+            <div class="input-group">
+                <label for="lucro">Margem de Lucro (%):</label>
+                <input type="number" id="lucro" placeholder="Percentual de lucro" title="Percentual que será adicionado para garantir a lucratividade.">
+            </div>
+
+            <button type="submit">Gerar Orçamento</button>
+
+            <!-- Espaço para o orçamento detalhado -->
+            <div class="input-group">
+                <label for="orcamento">Orçamento detalhado:</label>
+                <textarea id="orcamento" placeholder="Resultado do orçamento gerado automaticamente" rows="5" readonly></textarea>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
